@@ -1,0 +1,16 @@
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+      <h2><%= pluralize(@sample.errors.count, "error") %> prohibited this sample from being saved:</h2>
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  Title: <%= f.text_field :title %>
+  Description <%= f.text_field :description %>
+  Owner: <%= f.text_field :owner %>
+  Category: <%= f.text_field :category_id %>
+  <%= f.submit %>
+<% end %>
