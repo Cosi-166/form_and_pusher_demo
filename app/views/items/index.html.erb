@@ -1,11 +1,13 @@
-<h1>Listing items</h1>
 
-<table>
+<h1>Items</h1>
+
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Description</th>
-      <th>Type</th>
+      <th>Desc</th>
+      <th>Owner</th>
+      <th>Category</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,7 +19,8 @@
       <tr>
         <td><%= item.title %></td>
         <td><%= item.description %></td>
-        <td><%= item.type %></td>
+        <td><%= item.owner %></td>
+        <td><%= item.category_id %></td>        
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

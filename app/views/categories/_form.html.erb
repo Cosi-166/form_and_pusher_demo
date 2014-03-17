@@ -1,0 +1,14 @@
+<%= form_for(@category) do |f| %>
+  <% if @category.errors.any? %>
+      <h2><%= pluralize(@sample.errors.count, "error") %> prohibited this sample from being saved:</h2>
+      <ul>
+      <% @samcategoryple.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  Title: <%= f.text_field :title %>
+  Description <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>

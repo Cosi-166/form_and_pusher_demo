@@ -3,9 +3,21 @@
 one:
   title: MyString
   description: MyText
+<<<<<<< HEAD
   type: 
+=======
+  owner: MyText
+  category_id: MyString
+  integer: MyString
+>>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc
 
 two:
   title: MyString
   description: MyText
+<<<<<<< HEAD
   type: 
+=======
+  owner: MyText
+  category_id: MyString
+  integer: MyString
+>>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc

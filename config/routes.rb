@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Lostandfound::Application.routes.draw do
   resources :items do
     get 'search', on: :collection
@@ -5,6 +6,21 @@ Lostandfound::Application.routes.draw do
   
   get 'search', to: "items#search_results"
 
+=======
+Formdemo::Application.routes.draw do
+  resources :samples
+
+  resources :categories
+
+  resources :items do
+    collection do
+      get 'search'
+      get 'do_search'
+    end
+  end
+
+  root 'items#index'
+>>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

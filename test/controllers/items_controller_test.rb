@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ItemsControllerTest < ActionController::TestCase
+<<<<<<< HEAD
   setup do
     @item = items(:one)
   end
@@ -46,4 +47,9 @@ class ItemsControllerTest < ActionController::TestCase
 
     assert_redirected_to items_path
   end
+=======
+  # test "the truth" do
+  #   assert true
+  # end
+>>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc
 end
