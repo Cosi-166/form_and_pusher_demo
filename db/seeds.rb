@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts "creating categories"
+Category.destroy_all
 
 books = Category.create(title: "book", description: "Books, Magazines etc.")
 electronics = Category.create(title: "electronics", description: "Computer, Cellphone, etc")
@@ -14,12 +15,12 @@ clothing = Category.create(title: "clothing", description: "Shoes, Jackets, Belt
 jewelry = Category.create(title: "jewelry", description: "Rings, watches, necklaces, etc")
 
 owners = ["Jane Smith", "Ira Levin", "George Benson"]
-colors = ["Red", "Brown", "Green", "White"]
-clothingnames = ["Shoes", "Wallet", "Belt"]
-adjective = ["favorite", "perfect", "great"]
+colors = ["red", "brown", "green", "white", "tiny"]
+clothingnames = ["shoes", "wallet", "belt"]
+adjective = ["My favorite", "The perfect", "A great"]
 
-# creating sample clothing
-5.times do
+puts "creating sample clothing"
+15.times do
   title = colors.sample + " " + clothingnames.sample
   description = adjective.sample + " " + title
   Item.create(title: title, description: description, owner: owners.sample, category: clothing)

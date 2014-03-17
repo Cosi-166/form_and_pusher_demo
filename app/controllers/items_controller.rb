@@ -21,4 +21,13 @@ class ItemsController < ApplicationController
       render action: 'new'
     end
   end
+
+  def search
+    @categories = Category.all.map {|c| [c.title, c.id]}
+  end
+
+  def do_search
+    puts "**** #{params}"
+    redirect_to items_path
+  end
 end

@@ -3,7 +3,14 @@ Formdemo::Application.routes.draw do
 
   resources :categories
 
-  resources :items
+  resources :items do
+    collection do
+      get 'search'
+      get 'do_search'
+    end
+  end
+
+  root 'items#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
