@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-Lostandfound::Application.configure do
-=======
 Formdemo::Application.configure do
->>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

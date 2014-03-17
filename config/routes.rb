@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-Lostandfound::Application.routes.draw do
-  resources :items do
-    get 'search', on: :collection
-  end
-  
-  get 'search', to: "items#search_results"
-
-=======
 Formdemo::Application.routes.draw do
   resources :samples
 
@@ -20,7 +11,6 @@ Formdemo::Application.routes.draw do
   end
 
   root 'items#index'
->>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

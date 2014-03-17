@@ -5,9 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-<<<<<<< HEAD
-=======
-
 puts "creating categories"
 Category.destroy_all
 
@@ -27,4 +24,3 @@ puts "creating sample clothing"
   description = adjective.sample + " " + title
   Item.create(title: title, description: description, owner: owners.sample, category: clothing)
 end
->>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc
