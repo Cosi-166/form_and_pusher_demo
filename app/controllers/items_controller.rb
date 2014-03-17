@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
   end
 
   def do_search
-    puts "**** #{params}"
-    redirect_to items_path
+    @items = Item.where(title: params[:title], category_id: params[:category_id])
+    render :index
   end
 end
