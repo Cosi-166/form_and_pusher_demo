@@ -8,6 +8,7 @@ Formdemo::Application.routes.draw do
       get 'search'
       get 'do_search'
     end
+    resources :comments, only: [:index, :new, :create]
   end
 
   root 'items#index'
