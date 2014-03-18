@@ -12,8 +12,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    clean_params = params.require(:item).permit(:title, :description, :owner, :type)
-    @item = Item.new(clean_params)
+    item_params = params.require(:item).permit(:title, :description, :owner, :type)
+    @item = Item.new(item_params)
     if @item.save
         redirect_to @item, notice: 'Item was successfully created.'
     else
