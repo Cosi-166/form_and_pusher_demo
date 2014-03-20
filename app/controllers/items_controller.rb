@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
   end
 
   def do_search
+    binding.pry
     @items = Item.where(title: params[:title], category_id: params[:category_id])
     render :index
   end

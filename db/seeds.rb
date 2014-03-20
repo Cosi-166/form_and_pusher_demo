@@ -5,12 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 puts "creating categories"
 Category.destroy_all
 
 books = Category.create(title: "book", description: "Books, Magazines etc.")
 electronics = Category.create(title: "electronics", description: "Computer, Cellphone, etc")
-clothing = Category.create(title: "clothing", description: "Shoes, Jackets, Belts, etc")[0]
+clothing = Category.create(title: "clothing", description: "Shoes, Jackets, Belts, etc")
 jewelry = Category.create(title: "jewelry", description: "Rings, watches, necklaces, etc")
 
 owners = ["Jane Smith", "Ira Levin", "George Benson"]
