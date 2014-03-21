@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
   def new
     @item = Item.find(params[:item_id])
-    @comment = Comment.new
+    @comment = @item.comments.new
   end
 
   def create
