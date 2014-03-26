@@ -1,12 +1,12 @@
 <div class="col-md-offset-1 col-md-4">
   <h1>Search</h1>
-    <%= form_tag(do_search_items_path, method: "get", role: "form", class: "form") do %>
+    <%= form_tag(do_search_items_path, method: "get", remote: true, role: "form", class: "form") do %>
       <div class="form-group">
         <label class="control-label">And/Or:</label>
         <%= select_tag(:all_any, 
             options_for_select(
-              [['match all conditions', 1], 
-               ["match any conditions", 2]]), class: "form-control") %>
+              [['match all conditions', "all"], 
+               ["match any conditions", "any"]]), class: "form-control") %>
       </div>
 
       <div class="form-group">
@@ -30,8 +30,7 @@
 
       <%= submit_tag("Search", class: "btn btn-default" ) %>
     <% end %>
-    
-    <% if !@items.nil? %>
-      <%= render "index" %>
-    <% end %>
+</div>
+<div class="row col-md-offset-1 col-md-11">
+  <div id="search_results">
 </div>

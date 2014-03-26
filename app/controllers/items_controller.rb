@@ -32,12 +32,16 @@ class ItemsController < ApplicationController
     all_any_parm = params.fetch(:all_any)
     title_parm = params.fetch(:title)
     cat_id_parm = params.fetch(:category_id)
-    @items = Item.do_search(
-          title: title_parm,
-          cat: cat_id_parm,
+    @items = Item.do_item_search(
+          searchtitle: title_parm,
+          catid: cat_id_parm.to_i,
           all_any: all_any_parm,
           match_no: match_parm)
-    render :index
+
+    respond_to do |format|
+      format.js
+    end
+
   end
 
 end
