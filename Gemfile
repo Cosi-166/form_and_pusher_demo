@@ -33,6 +33,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'pusher'
+
 gem 'jazz_hands'
 
 # Use ActiveModel has_secure_password
