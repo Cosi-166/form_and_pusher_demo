@@ -9,6 +9,17 @@
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery.js"></script>
 
+<script src="http://js.pusher.com/2.1/pusher.min.js"></script>
+<script>
+var pusher = new Pusher('5e157d0652d97d9fa6d4');
+var channel = pusher.subscribe('formdemo_channel');
+channel.bind('comment_event', function(data) {
+	var elt_id = 'comment-count-'+data.item_id;
+	document.getElementById(elt_id).innerHTML = data.count;
+});
+</script>
+
+
 </head>
 <body>
 

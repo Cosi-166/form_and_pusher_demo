@@ -18,7 +18,8 @@
         <td><%= item.description %></td>
         <td><%= item.owner %></td>
         <td><%= item.category_id %></td>
-        <td><%= link_to 'Comment', new_item_comment_path(item) %> (<%= item.comments.size %>)
+        <td><%= link_to 'Comment', new_item_comment_path(item) %> 
+          (<span id="comment-count-<%= item.id %>"><%= item.comments.size %></span>)
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

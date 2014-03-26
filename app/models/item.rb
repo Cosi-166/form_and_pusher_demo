@@ -5,6 +5,7 @@ class Item < ActiveRecord::Base
 # all_any: "all" | "any"
 # cat: 0 | cat_id
 # title: nil | search title field
+
   def self.do_item_search(searchtitle: nil, catid: nil, all_any: nil, match_no: nil)
   	whereclause = []
   	args = []
