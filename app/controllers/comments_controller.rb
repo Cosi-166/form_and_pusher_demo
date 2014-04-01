@@ -1,4 +1,5 @@
 require 'pusher'
+
 Pusher.app_id = '69892'
 Pusher.key = '5e157d0652d97d9fa6d4'
 Pusher.secret = '791f84738e2d63437947'    
