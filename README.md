@@ -10,4 +10,5 @@ This is a sample program to illustrate in the simplest possible ways a variety o
 * Testing with minitest/spec and capybara
 * Deployment with Codeship.io
 
-https://www.codeship.io/projects/e04e4cd0-9cbb-0131-26b1-1aaa96d08c73/status
+[![Code Climate](https://codeclimate.com/github/pitosalas/formdemo.png)](https://codeclimate.com/github/pitosalas/formdemo)
+[![Codeship](https://www.codeship.io/projects/e04e4cd0-9cbb-0131-26b1-1aaa96d08c73/status)
