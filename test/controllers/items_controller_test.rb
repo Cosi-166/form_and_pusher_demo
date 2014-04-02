@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ItemsControllerTest < ActionController::TestCase
-<<<<<<< HEAD
   setup do
     @item = items(:one)
   end
@@ -19,7 +18,7 @@ class ItemsControllerTest < ActionController::TestCase
 
   test "should create item" do
     assert_difference('Item.count') do
-      post :create, item: { description: @item.description, title: @item.title, type: @item.type }
+      post :create, item: { description: @item.description, title: @item.title }
     end
 
     assert_redirected_to item_path(assigns(:item))
@@ -30,26 +29,4 @@ class ItemsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @item
-    assert_response :success
-  end
-
-  test "should update item" do
-    patch :update, id: @item, item: { description: @item.description, title: @item.title, type: @item.type }
-    assert_redirected_to item_path(assigns(:item))
-  end
-
-  test "should destroy item" do
-    assert_difference('Item.count', -1) do
-      delete :destroy, id: @item
-    end
-
-    assert_redirected_to items_path
-  end
-=======
-  # test "the truth" do
-  #   assert true
-  # end
->>>>>>> d55581b914075feb8d47fc2da6de5cac65f897dc
 end

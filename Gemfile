@@ -30,11 +30,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'minitest-spec-rails'
+  gem 'capybara_minitest_spec' # for capybara integration and spec matchers
+  gem 'turn' # for prettier test output
+end
+
 gem 'pusher'
-
 gem 'jazz_hands'
-
-#gem 'sqlite3', group: :development
+gem 'sqlite3', group: :development
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 

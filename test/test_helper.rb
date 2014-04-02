@@ -1,10 +1,14 @@
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'minitest/autorun'
+require 'capybara/rails'
+require 'turn'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
-
+  include Rails.application.routes.url_helpers # for x_path and x_url helpers
+  include Capybara::DSL
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests

@@ -1,28 +1,13 @@
-== README
+### README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample program to illustrate in the simplest possible ways a variety of rails techniques. It is used in the course [Brandeis Computer Science 236b](bit.ly/cosi236b).
 
-Things you may want to cover:
+* Basic Rails App
+* Submitting forms
+* Introduce Bootstrap
+* Simple Ajax
+* Server Push with Pusher.com
+* Testing with minitest/spec and capybara
+* Deployment with Codeship.io
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+https://www.codeship.io/projects/e04e4cd0-9cbb-0131-26b1-1aaa96d08c73/status
