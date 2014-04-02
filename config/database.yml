@@ -18,8 +18,9 @@ test:
   pool: 5
   timeout: 5000
 
-development:
+production:
   adapter: postgresql
-  host: localhost
-  username: user
-  database: app-dev
+  database: my_db
+  pool: 5
+  timeout: 5000
+  
