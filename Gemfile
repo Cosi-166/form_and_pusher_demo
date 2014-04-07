@@ -33,6 +33,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Enable ActiveRecord sessions
+gem 'activerecord-session_store'
+
 gem 'pusher'
 
 gem 'jazz_hands'

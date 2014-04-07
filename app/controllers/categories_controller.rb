@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   def index
+    binding.pry
     @categories = Category.all
   end
 
