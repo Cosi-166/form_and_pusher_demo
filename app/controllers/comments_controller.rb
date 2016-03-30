@@ -37,6 +37,7 @@ class CommentsController < ApplicationController
   private
 
   def push_count(item_id, count)
-    Pusher.trigger('formdemo_channel', 'comment_event', {item_id: item_id, count: count})
+    Pusher.trigger('formdemo_channel', 
+      'comment_event', {item_id: item_id, count: count})
   end
 end

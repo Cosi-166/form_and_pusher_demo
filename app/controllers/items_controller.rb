@@ -1,4 +1,8 @@
+require 'pry-byebug'
+
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+
   def index
     @items = Item.all
   end
@@ -11,6 +15,10 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
   def create
     item_params = params.require(:item).permit(:title, :description, :owner, :type)
     @item = Item.new(item_params)
@@ -20,6 +28,19 @@ class ItemsController < ApplicationController
       render action: 'new'
     end
   end
+
+  def update
+    respond_to do |format|
+      if @item.update(items_params)
+        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @sample.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 
   def search
     @categories = Category.all.map {|c| [c.title, c.id]}
@@ -43,5 +64,18 @@ class ItemsController < ApplicationController
     end
 
   end
+
+  def items_params
+    params.require(:item).permit(:description, :owner, :category_id)
+  end
+
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+
+
 
 end

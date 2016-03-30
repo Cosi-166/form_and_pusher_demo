@@ -13,23 +13,23 @@
 
 ActiveRecord::Schema.define(version: 20140317221454) do
 
-  create_table "categories", force: true do |t|
-    t.string   "title"
-    t.string   "description"
+  create_table "categories", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.string   "description", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "comments", force: true do |t|
-    t.string   "from"
+  create_table "comments", force: :cascade do |t|
+    t.string   "from",       limit: 255
     t.text     "message"
     t.integer  "item_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "items", force: true do |t|
-    t.string   "title"
+  create_table "items", force: :cascade do |t|
+    t.string   "title",       limit: 255
     t.text     "description"
     t.text     "owner"
     t.integer  "category_id"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20140317221454) do
     t.datetime "updated_at"
   end
 
-  create_table "samples", force: true do |t|
-    t.string   "name"
+  create_table "samples", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"
