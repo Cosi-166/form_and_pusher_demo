@@ -3,9 +3,9 @@
     <%= form_tag(do_search_items_path, method: "get", remote: true, role: "form", class: "form") do %>
       <div class="form-group">
         <label class="control-label">And/Or:</label>
-        <%= select_tag(:all_any, 
+        <%= select_tag(:all_any,
             options_for_select(
-              [['match all conditions', "all"], 
+              [['match all conditions', "all"],
                ["match any conditions", "any"]]), class: "form-control") %>
       </div>
 
@@ -21,9 +21,9 @@
 
       <div class="form-group">
         <label>Return matching or non-matching items</label>
-        <%= select_tag(:match_no_match, 
+        <%= select_tag(:match_no_match,
               options_for_select(
-              [['only matching', "match"], 
+              [['only matching', "match"],
                ['only non matching', "nomatch"]
               ]), class: "form-control") %>
       </div>
@@ -33,4 +33,5 @@
 </div>
 <div class="row col-md-offset-1 col-md-11">
   <div id="search_results">
+  </div>
 </div>
