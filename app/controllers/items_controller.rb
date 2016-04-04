@@ -62,8 +62,19 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.js
     end
-
   end
+
+  # DELETE /samples/1
+  # DELETE /samples/1.json
+  def destroy
+    @item.destroy
+    respond_to do |format|
+      format.html { redirect_to items_path }
+      format.json { head :no_content }
+    end
+  end
+
+
 
   def items_params
     params.require(:item).permit(:description, :owner, :category_id)
