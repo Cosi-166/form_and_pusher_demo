@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20140317221454) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.string   "description", limit: 255
+    t.string   "title"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "from",       limit: 255
+    t.string   "from"
     t.text     "message"
     t.integer  "item_id"
     t.datetime "created_at"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140317221454) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string   "title",       limit: 255
+    t.string   "title"
     t.text     "description"
     t.text     "owner"
     t.integer  "category_id"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140317221454) do
   end
 
   create_table "samples", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"
